@@ -39,7 +39,7 @@ public class Day3 {
             for (int j = 0; j < input[i].length; j++) {
                 char currentChar = input[i][j];
                 if (currentChar == '*') {
-                    List<Integer> sumList = gearAdjency(i, j, input);
+                    List<Integer> sumList = gearAdjacency(i, j, input);
                     if (sumList.size() > 1)
                         sum += sumList.get(0) * sumList.get(1);
                 }
