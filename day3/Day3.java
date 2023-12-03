@@ -81,7 +81,7 @@ public class Day3 {
         return false;
     }
 
-    public static List<Integer> gearAdjency(int x, int y, char[][] input) {
+    public static List<Integer> gearAdjacency(int x, int y, char[][] input) {
         List<Integer> numbers = new ArrayList<Integer>();
         int numRows = input.length;
         int numCols = input[0].length;
