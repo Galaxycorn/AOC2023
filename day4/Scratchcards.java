@@ -8,7 +8,7 @@ public class Scratchcards {
     private int points;
     private int matchingCounter;
 
-    public Scratchcards(List<Integer> yourNumbers, List<Integer> winningNumbers, int id) {
+    public Scratchcards(List<Integer> yourNumbers, List<Integer> winningNumbers) {
         this.yourNumbers = yourNumbers;
         this.winningNumbers = winningNumbers;
     }

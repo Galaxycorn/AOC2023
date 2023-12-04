@@ -30,7 +30,6 @@ public class Day4 {
     }
 
     public static Scratchcards createCard(String line) {
-        int id = 0;
         List<Integer> yourNumbers = new ArrayList<>();
         List<Integer> winningNumbers = new ArrayList<>();
         line = line.split(":")[1];
@@ -48,7 +47,7 @@ public class Day4 {
             winningNumbers.add(Integer.parseInt(findWinningNumber.group()));
         }
 
-        return new Scratchcards(yourNumbers, winningNumbers, id);
+        return new Scratchcards(yourNumbers, winningNumbers);
     }
 
     public static Scratchcards findPoints(Scratchcards card) {
