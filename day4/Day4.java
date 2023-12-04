@@ -33,7 +33,6 @@ public class Day4 {
         int id = 0;
         List<Integer> yourNumbers = new ArrayList<>();
         List<Integer> winningNumbers = new ArrayList<>();
-        String idString = line.split(":")[0];
         line = line.split(":")[1];
         String yourNumbersInput = line.split("\\|")[1];
         String winningNumbersInput = line.split("\\|")[0];
@@ -47,10 +46,6 @@ public class Day4 {
         Matcher findWinningNumber = digitRegex.matcher(winningNumbersInput);
         while (findWinningNumber.find()) {
             winningNumbers.add(Integer.parseInt(findWinningNumber.group()));
-        }
-        Matcher findId = digitRegex.matcher(idString);
-        while (findId.find()) {
-            id = Integer.parseInt(findId.group());
         }
 
         return new Scratchcards(yourNumbers, winningNumbers, id);
