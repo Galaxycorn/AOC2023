@@ -8,10 +8,6 @@ public class Range implements Comparable<Range> {
         this.end = end;
     }
 
-    public boolean overlapOrAdjacent(Range bigger) {
-        return bigger.contains(start) || bigger.contains(end + 1) || contains(bigger.start);
-    }
-
     public boolean contains(long number) {
         return number >= start && number <= end;
     }
