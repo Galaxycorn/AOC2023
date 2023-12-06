@@ -45,6 +45,13 @@ public class Day6 {
         return possibilities;
     }
 
+    public static double partTwoBis(List<Integer> times, List<Integer> distances) {
+        long time = Long.parseLong(times.stream().map(Object::toString).collect(Collectors.joining("")));
+        long distance = Long.parseLong(distances.stream().map(Object::toString).collect(Collectors.joining("")));
+        double sqrt = Math.sqrt(time * time - 4 * distance);
+        return Math.ceil((time + sqrt) / 2) - Math.floor((time - sqrt) / 2) - 1;
+    }
+
     public static void main(String[] args) throws IOException {
         String filePath = "day6/input.txt";
         Path path = Paths.get(filePath);
@@ -64,8 +71,10 @@ public class Day6 {
 
         int partOne = partOne(times, distances);
         long sumPartTwo = partTwo(times, distances);
+        double sumPartTwoBis = partTwoBis(times, distances);
         System.out.println("Part One : " + partOne);
         System.out.println("Part Two : " + sumPartTwo);
+        System.out.println("Part Two bis : " + sumPartTwoBis);
     }
 
 }
